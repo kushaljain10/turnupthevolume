@@ -1,0 +1,10 @@
+export { Header } from './Header';
+export { Hero } from './Hero';
+export { ContractBar } from './ContractBar';
+export { Lore } from './Lore';
+export { Manifesto } from './Manifesto';
+export { Amplify } from './Amplify';
+export { Token } from './Token';
+export { Cta } from './Cta';
+export { Faq } from './Faq';
+export { Footer } from './Footer';
