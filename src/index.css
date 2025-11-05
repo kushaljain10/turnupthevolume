@@ -49,11 +49,13 @@ body {
 .section {
   padding-top: 4rem;
   padding-bottom: 4rem;
+  scroll-margin-top: 64px; /* offset for sticky header */
 }
 
 .section-sm {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  scroll-margin-top: 64px; /* offset for sticky header */
 }
 
 /* Design helpers */

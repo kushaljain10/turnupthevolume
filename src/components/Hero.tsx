@@ -1,11 +1,11 @@
-import { motion } from 'framer-motion';
-import * as Dialog from '@radix-ui/react-dialog';
-import { Copy, Check } from 'lucide-react';
-import { useState } from 'react';
-import { copyToClipboard } from '../lib/copyToClipboard';
+import { motion } from "framer-motion";
+import * as Dialog from "@radix-ui/react-dialog";
+import { Copy, Check } from "lucide-react";
+import { useState } from "react";
+import { copyToClipboard } from "../lib/copyToClipboard";
 
-const CONTRACT = 'XbXVF3H489xUDuyUCaRMLomCo8wsk2bfQGySJutpump';
-const X_COMMUNITY_URL = 'https://x.com/i/communities/1986009349748396089';
+const CONTRACT = "XbXVF3H489xUDuyUCaRMLomCo8wsk2bfQGySJutpump";
+const X_COMMUNITY_URL = "https://x.com/i/communities/1986009349748396089";
 
 export function Hero() {
   return (
@@ -14,11 +14,15 @@ export function Hero() {
       <div className="overflow-hidden border-b border-[#1C1C21]">
         <motion.div
           className="py-2 heading tracking-[0.3em] text-sm text-[#B3B3B8]"
-          animate={{ x: ['0%', '-50%'] }}
+          animate={{ x: ["0%", "-50%"] }}
           transition={{ repeat: Infinity, duration: 20, ease: [0, 0, 1, 1] }}
         >
-          <span className="inline-block mr-8">TURN IT UP • TURN IT UP • TURN IT UP</span>
-          <span className="inline-block mr-8">TURN IT UP • TURN IT UP • TURN IT UP</span>
+          <span className="inline-block mr-8">
+            TURN IT UP • TURN IT UP • TURN IT UP
+          </span>
+          <span className="inline-block mr-8">
+            TURN IT UP • TURN IT UP • TURN IT UP
+          </span>
         </motion.div>
       </div>
 
@@ -30,7 +34,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            {`TURN THE`}<br />{`VOLUME UP`}
+            {`TURN THE`}
+            <br />
+            {`VOLUME UP`}
           </motion.h1>
           <motion.p
             className="mt-6 max-w-[70ch] text-lg text-[#B3B3B8]"
@@ -38,7 +44,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            A rallying cry born of defiance. $VOLUME is a Solana token inspired by a moment when New York rejected fear, and chose to <strong>turn it up</strong> — together.
+            A rallying cry born of defiance. $VOLUME is a Solana token inspired
+            by a moment when New York rejected fear, and chose to{" "}
+            <strong>turn it up</strong> — together.
           </motion.p>
           <motion.div
             className="mt-8 flex items-center gap-3"
@@ -46,8 +54,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <a href="#token" className="btn btn-primary">Get $VOLUME</a>
-            <a href="#lore" className="btn btn-outline">Read the Lore</a>
+            <a href="#token" className="btn btn-primary">
+              Get $VOLUME
+            </a>
             <a
               href={X_COMMUNITY_URL}
               target="_blank"
@@ -64,8 +73,12 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <span>Ticker: <strong>$VOLUME</strong></span>
-            <span>Chain: <strong>Solana</strong></span>
+            <span>
+              Ticker: <strong>$VOLUME</strong>
+            </span>
+            <span>
+              Chain: <strong>Solana</strong>
+            </span>
             <ContractCopy />
           </motion.div>
         </div>
@@ -73,12 +86,19 @@ export function Hero() {
         {/* Backdrop */}
         <div className="relative">
           <div className="absolute inset-0 blur-3xl opacity-20 bg-gradient-to-b from-[#FF2436] to-[#FF7A1A]" />
-          <img src="/src/assets/skyline.svg" alt="Abstract NYC skyline" className="relative w-full opacity-50" />
+          <img
+            src="/src/assets/skyline.svg"
+            alt="Abstract NYC skyline"
+            className="relative w-full opacity-50"
+          />
         </div>
       </div>
 
       {/* Scroll cue */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-6 text-[#B3B3B8]" aria-hidden>
+      <div
+        className="absolute left-1/2 -translate-x-1/2 bottom-6 text-[#B3B3B8]"
+        aria-hidden
+      >
         <div className="animate-bounce">⌄</div>
       </div>
     </section>
@@ -92,13 +112,16 @@ function ContractCopy() {
     <Dialog.Root>
       <Dialog.Trigger asChild>
         <button className="inline-flex items-center gap-2 text-[#B3B3B8] hover:text-white">
-          Contract: <span className="font-mono">{short}</span> <Copy className="w-4 h-4" />
+          Contract: <span className="font-mono">{short}</span>{" "}
+          <Copy className="w-4 h-4" />
         </button>
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/60" />
         <Dialog.Content className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-md bg-[#0A0A0B] border border-[#1C1C21] p-6 rounded">
-          <Dialog.Title className="heading text-xl mb-3">Contract Address</Dialog.Title>
+          <Dialog.Title className="heading text-xl mb-3">
+            Contract Address
+          </Dialog.Title>
           <p className="font-mono break-all">{CONTRACT}</p>
           <div className="mt-4 flex items-center gap-3">
             <button
@@ -109,8 +132,12 @@ function ContractCopy() {
               }}
               className="btn btn-primary"
             >
-              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-              {copied ? 'Copied!' : 'Copy'}
+              {copied ? (
+                <Check className="w-4 h-4" />
+              ) : (
+                <Copy className="w-4 h-4" />
+              )}
+              {copied ? "Copied!" : "Copy"}
             </button>
             <Dialog.Close asChild>
               <button className="btn btn-outline">Close</button>

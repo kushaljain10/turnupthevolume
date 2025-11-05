@@ -1,4 +1,15 @@
-import { Header, Hero, ContractBar, Lore, Manifesto, Amplify, Token, Cta, Faq, Footer } from './components/IndexSections';
+import {
+  Header,
+  Hero,
+  ContractBar,
+  Lore,
+  Manifesto,
+  Amplify,
+  Token,
+  Cta,
+  Faq,
+  Footer,
+} from "./components/IndexSections";
 
 function App() {
   return (
@@ -12,7 +23,6 @@ function App() {
         <Amplify />
         <Token />
         <Cta />
-        <Faq />
       </main>
       <Footer />
     </div>
