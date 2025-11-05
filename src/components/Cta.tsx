@@ -13,12 +13,6 @@ export function Cta() {
         </h2>
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <a
-            href="#token"
-            className="inline-flex items-center rounded bg-black px-4 py-2 font-semibold text-[#FF2436] hover:opacity-90"
-          >
-            Get $VOLUME
-          </a>
-          <a
             href="https://x.com/i/communities/1986009349748396089"
             target="_blank"
             rel="noopener noreferrer"
@@ -29,10 +23,11 @@ export function Cta() {
         </div>
       </div>
       <div
-        className="absolute inset-0 opacity-20"
+        className="absolute inset-0 opacity-25"
         style={{
-          backgroundImage: "url(/src/assets/halftone.png)",
+          backgroundImage: "url(/banner.png)",
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       />
     </section>

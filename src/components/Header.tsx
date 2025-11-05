@@ -8,7 +8,6 @@ const nav: NavItem[] = [
   { label: "Lore", href: "#lore" },
   { label: "Manifesto", href: "#manifesto" },
   { label: "Token", href: "#token" },
-  { label: "FAQ", href: "#faq" },
 ];
 
 const X_COMMUNITY_URL = "https://x.com/i/communities/1986009349748396089";
@@ -32,7 +31,11 @@ export function Header() {
       aria-label="Site Header"
     >
       <div className="container flex h-14 items-center justify-between">
-        <a href="#" className="font-mono text-sm md:text-base tracking-widest">
+        <a
+          href="#"
+          className="flex items-center gap-2 text-sm md:text-base tracking-widest"
+        >
+          <img src="/icon.png" alt="$VOLUME icon" className="h-6 w-6" />
           <span className="hidden sm:inline heading font-extrabold">
             TURN THE VOLUME UP
           </span>
@@ -48,7 +51,7 @@ export function Header() {
             href={X_COMMUNITY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-outline"
+            className="btn btn-primary"
           >
             Join X Community
           </a>
@@ -95,7 +98,7 @@ function MobileMenu() {
               href={X_COMMUNITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline"
+              className="btn btn-primary"
             >
               Join X Community
             </a>

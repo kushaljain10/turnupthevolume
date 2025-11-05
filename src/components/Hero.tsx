@@ -44,8 +44,8 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            A rallying cry born of defiance. $VOLUME is a Solana token inspired
-            by a moment when New York rejected fear, and chose to{" "}
+            A rallying cry born of defiance. $VOLUME is a token inspired by a
+            moment when New York rejected fear, and chose to{" "}
             <strong>turn it up</strong> — together.
           </motion.p>
           <motion.div
@@ -54,14 +54,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           >
-            <a href="#token" className="btn btn-primary">
-              Get $VOLUME
-            </a>
             <a
               href={X_COMMUNITY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-outline"
+              className="btn btn-primary"
             >
               Join X Community
             </a>
@@ -83,13 +80,13 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* Backdrop */}
+        {/* Banner visual from public assets */}
         <div className="relative">
           <div className="absolute inset-0 blur-3xl opacity-20 bg-gradient-to-b from-[#FF2436] to-[#FF7A1A]" />
           <img
-            src="/src/assets/skyline.svg"
-            alt="Abstract NYC skyline"
-            className="relative w-full opacity-50"
+            src="/animated_banner.gif"
+            alt="$VOLUME community banner"
+            className="relative w-full rounded"
           />
         </div>
       </div>
