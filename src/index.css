@@ -1,11 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Space+Grotesk:wght@600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   color-scheme: dark;
+}
+
+@theme {
+  --color-background: #0A0A0B;
+  --color-electricRed: #FF2436;
+  --color-signalOrange: #FF7A1A;
+  --color-secondaryText: #B3B3B8;
+  --color-lines: #1C1C21;
+  --color-success: #00D68F;
+
+  --font-sans: Inter, system-ui, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --font-heading: "Space Grotesk", Inter, system-ui;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 html, body, #root {
@@ -13,19 +22,93 @@ html, body, #root {
 }
 
 body {
-  @apply bg-background text-white font-sans min-w-[320px];
+  min-width: 320px;
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: #fff;
 }
 
 .heading {
-  @apply font-heading tracking-tight;
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
 }
 
 .muted {
-  @apply text-secondaryText;
+  color: var(--color-secondaryText);
 }
 
 .container {
-  @apply max-w-6xl mx-auto px-4;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Section spacing helpers (fallback if utilities are unavailable) */
+.section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-sm {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Design helpers */
+.card {
+  border-radius: 0.5rem;
+  border: 1px solid #1C1C21;
+  background-color: rgba(0,0,0,0.3);
+  padding: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #FF2436;
+  color: #fff;
+}
+.btn-primary:hover { opacity: 0.9; }
+.btn-primary:focus-visible {
+  outline: 2px solid #FF2436;
+  outline-offset: 2px;
+}
+
+.btn-outline {
+  border: 1px solid #1C1C21;
+  color: #B3B3B8;
+  background-color: transparent;
+}
+.btn-outline:hover { border-color: #FF2436; color: #fff; }
+.btn-outline:focus-visible {
+  outline: 2px solid #FF2436;
+  outline-offset: 2px;
+}
+
+.eyebrow {
+  color: #B3B3B8;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+}
+
+.link {
+  color: #B3B3B8;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.link:hover { color: #fff; }
+.link:focus-visible {
+  outline: 2px solid #FF2436;
+  outline-offset: 2px;
 }
 
 /* CRT scanline overlay for subtle texture */

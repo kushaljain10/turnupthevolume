@@ -9,22 +9,22 @@ const tiles = [
 
 export function Amplify() {
   return (
-    <section className="container py-16">
+    <section className="container section">
       <h2 className="heading text-2xl md:text-3xl font-bold mb-6">What we amplify</h2>
       <div className="grid md:grid-cols-3 gap-6">
         {tiles.map((t) => (
           <motion.div
             key={t.title}
             whileHover={{ y: -4, boxShadow: '0 0 32px rgba(255, 36, 54, 0.2)' }}
-            className="rounded border border-lines p-6 bg-black/30"
+            className="card"
           >
-            <t.icon className="w-8 h-8 text-electricRed" />
+            <t.icon className="w-8 h-8 text-[#FF2436]" />
             <div className="mt-4 heading text-lg font-semibold">{t.title}</div>
-            <p className="mt-2 text-secondaryText">{t.caption}</p>
+            <p className="mt-2 text-[#B3B3B8]">{t.caption}</p>
           </motion.div>
         ))}
       </div>
-      <p className="mt-4 text-sm text-secondaryText">Symbolic commitments reflecting themes of fairness and solidarity. Not a promise of utility or outcomes.</p>
+      <p className="mt-4 text-sm text-[#B3B3B8]">Symbolic commitments reflecting themes of fairness and solidarity. Not a promise of utility or outcomes.</p>
     </section>
   );
 }

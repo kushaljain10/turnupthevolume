@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { stagger } from '../lib/animations';
 
 const items = [
   {
@@ -21,14 +20,27 @@ const items = [
 ];
 
 export function Manifesto() {
+  const gridVariants = {
+    hidden: { opacity: 0, y: 16 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, staggerChildren: 0.08 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 12 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
   return (
-    <section id="manifesto" className="container py-16">
+    <section id="manifesto" className="container section">
       <h2 className="heading text-2xl md:text-3xl font-bold mb-8">What does “turn it up” mean here?</h2>
-      <motion.div variants={stagger()} initial="hidden" animate="show" className="grid md:grid-cols-2 gap-6">
+      <motion.div variants={gridVariants} initial="hidden" animate="show" className="grid md:grid-cols-2 gap-6">
         {items.map((it) => (
-          <motion.div key={it.title} className="rounded border border-lines p-6 bg-black/30">
+          <motion.div key={it.title} variants={itemVariants} className="card">
             <h3 className="heading text-xl font-semibold">{it.title}</h3>
-            <p className="mt-3 text-secondaryText">{it.body}</p>
+            <p className="mt-3 text-[#B3B3B8]">{it.body}</p>
           </motion.div>
         ))}
       </motion.div>

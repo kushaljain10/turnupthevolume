@@ -7,7 +7,7 @@ export function EqualiserLogo({ className = '' }: { className?: string }) {
       {bars.map((_, i) => (
         <motion.div
           key={i}
-          className="bg-electricRed"
+          className="bg-[#FF2436]"
           style={{ height: `${Math.max(8, ((i % 6) + 1) * 12)}px` }}
           animate={{ height: [24, 48, 16, 36, 20] }}
           transition={{ repeat: Infinity, duration: 2 + (i % 4) * 0.3, ease: 'easeInOut' }}

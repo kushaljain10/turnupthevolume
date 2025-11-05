@@ -25,9 +25,9 @@ const QA = [
 
 export function Faq() {
   return (
-    <section id="faq" className="container py-16">
+    <section id="faq" className="container section">
       <h2 className="heading text-2xl md:text-3xl font-bold mb-6">FAQ</h2>
-      <Accordion.Root type="single" collapsible className="divide-y divide-lines border border-lines rounded">
+      <Accordion.Root type="single" collapsible className="divide-y divide-[#1C1C21] border border-[#1C1C21] rounded">
         {QA.map((item, idx) => (
           <Accordion.Item key={idx} value={`item-${idx}`}>
             <Accordion.Header>
@@ -35,7 +35,7 @@ export function Faq() {
                 <span className="heading font-semibold">{item.q}</span>
               </Accordion.Trigger>
             </Accordion.Header>
-            <Accordion.Content className="p-4 text-secondaryText">
+            <Accordion.Content className="p-4 text-[#B3B3B8]">
               {item.a}
             </Accordion.Content>
           </Accordion.Item>

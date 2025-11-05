@@ -1,7 +1,7 @@
 export function Lore() {
   return (
-    <section id="lore" className="container py-16" aria-labelledby="lore-label">
-      <div className="text-secondaryText mb-4">LORE</div>
+    <section id="lore" className="container section" aria-labelledby="lore-label">
+      <div className="text-[#B3B3B8] mb-4">LORE</div>
       <h2 id="lore-label" className="heading text-2xl md:text-3xl font-bold mb-6">“Turn the volume up.”</h2>
       <div className="grid md:grid-cols-2 gap-8 text-lg leading-relaxed">
         <div>
@@ -22,7 +22,7 @@ export function Lore() {
           <p className="mt-4">
             <strong>$VOLUME</strong> channels that energy — not as politics, but as <strong>collective signal</strong>. When they turn it up, <strong>we turn up together</strong>.
           </p>
-          <p className="mt-6 text-sm text-secondaryText">
+          <p className="mt-6 text-sm text-[#B3B3B8]">
             The above is a <strong>narrative inspiration</strong> and rallying metaphor for the token. It is <strong>not</strong> an endorsement, verification, or political solicitation.
           </p>
         </div>
