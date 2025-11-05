@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { copyToClipboard } from '../lib/copyToClipboard';
 
 const CONTRACT = 'XbXVF3H489xUDuyUCaRMLomCo8wsk2bfQGySJutpump';
+const X_COMMUNITY_URL = 'https://x.com/i/communities/1986009349748396089';
 
 export function Hero() {
   return (
@@ -47,6 +48,14 @@ export function Hero() {
           >
             <a href="#token" className="btn btn-primary">Get $VOLUME</a>
             <a href="#lore" className="btn btn-outline">Read the Lore</a>
+            <a
+              href={X_COMMUNITY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+            >
+              Join X Community
+            </a>
           </motion.div>
 
           <motion.div

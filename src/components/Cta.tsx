@@ -5,7 +5,7 @@ export function Cta() {
         <h2 className="heading text-3xl md:text-4xl font-extrabold">If they turn it up, we turn up louder.</h2>
         <div className="mt-6 flex flex-wrap items-center gap-3">
           <a href="#token" className="inline-flex items-center rounded bg-black px-4 py-2 font-semibold text-[#FF2436] hover:opacity-90">Get $VOLUME</a>
-          <a href="#" className="inline-flex items-center rounded border border-black/30 bg-black/20 px-4 py-2 font-semibold hover:bg-black/30">Join the Noise</a>
+          <a href="https://x.com/i/communities/1986009349748396089" target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded border border-black/30 bg-black/20 px-4 py-2 font-semibold hover:bg-black/30">Join X Community</a>
         </div>
         <p className="mt-4 text-sm text-black/80">Trade links are third-party. Do your own research. Nothing here is financial advice.</p>
       </div>
